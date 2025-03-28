@@ -295,5 +295,49 @@
             </p>
         </div>
     </div>
+    <script>
+        // Select the login button
+        const loginButton = document.querySelector('.btn-primary');
+        
+        // Add click event listener to the login button
+        loginButton.addEventListener('click', function(event) {
+            // Prevent default form submission
+            event.preventDefault();
+            
+            // Get email and password inputs
+            const emailInput = document.querySelector('input[type="email"]');
+            const passwordInput = document.querySelector('input[type="password"]');
+            
+            // Basic validation
+            const email = emailInput.value.trim();
+            const password = passwordInput.value;
+            
+            // Simple validation checks
+            if (!email) {
+                alert('Please enter your email');
+                return;
+            }
+            
+            if (!password) {
+                alert('Please enter your password');
+                return;
+            }
+            
+            // Basic email format check
+            if (!email.includes('@')) {
+                alert('Please enter a valid email address');
+                return;
+            }
+            
+            // Minimum password length
+            if (password.length < 6) {
+                alert('Password must be at least 6 characters long');
+                return;
+            }
+            
+            // If validation passes, redirect to landing page
+            window.location.href = 'landing.html';
+        });
+    </script>
 </body>
 </html>
