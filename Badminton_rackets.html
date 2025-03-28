@@ -23,19 +23,19 @@
         .logo {
             display: flex;
             align-items: center;
-            justify-content: flex-start; /* Align to the left */
-            gap: 1rem; /* Increase spacing between logo and text */
+            justify-content: flex-start;
+            gap: 1rem;
         }
         
         .logo img {
-            width: 50px; /* Adjust size as needed */
-            height: auto; /* Maintain aspect ratio */
+            width: 50px;
+            height: auto;
         }
         
         .logo h1 {
-            font-size: 1.8rem; /* Adjust font size */
+            font-size: 1.8rem;
             font-weight: bold;
-            color: #333; /* Change color if needed */
+            color: #333;
         }
         .nav-container {
             padding: 1rem 2rem;
@@ -237,7 +237,6 @@
             <button class="search-button">Search</button>
         </div>
     </header>
-    
 
     <main class="product-container">
         <div class="product-gallery">
@@ -254,7 +253,6 @@
         <div class="product-info">
             <h2 class="product-title">YONEX Astrox Lite 27i Graphite Strung Badminton Racket with Full Racket Cover (Blue) | For Intermediate Players | 77 grams | Maximum String Tension - 30lbs</h2>
             <div class="price-container">
-
                 <div class="price">₹900</div>
             </div>  
             <ul>
@@ -265,8 +263,7 @@
                 <li><strong>Grip Size:</strong> 3 3/4 inches</li>
                 <li><strong>Skill Level:</strong> Advanced</li>
             </ul>
-            <button class="add-to-cart-btn">Add to Cart</button>
-            <button class="buy-now-btn">Buy Now</button>
+            <button class="add-to-cart-btn" id="addToCartBtn">Add to Cart</button>
         </div>
     </main>
 
@@ -299,6 +296,12 @@
             const searchTerm = document.querySelector('.search-input').value;
             // In a real implementation, this would trigger a search
             console.log('Searching for:', searchTerm);
+        });
+
+        // Add to Cart Functionality
+        document.getElementById('addToCartBtn').addEventListener('click', function() {
+            // Redirect to cart page
+            window.location.href = 'yourcart_badminton.html';
         });
     </script>
 </body>
